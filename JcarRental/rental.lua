@@ -25,6 +25,7 @@ Citizen.CreateThread(function()
         end
 
         if isInMarker and not HasAlreadyGotMessage then
+            local ped = PlayerPedId()
             HasAlreadyGotMessage = true
             exports['progressBars']:startUI(5000, "Renting Car")
             TaskStartScenarioInPlace(PlayerPedId(), "CODE_HUMAN_CROSS_ROAD_WAIT", 0, false)
@@ -61,6 +62,7 @@ Citizen.CreateThread(function()
         end
 
         if isInMarker and not HasAlreadyGotMessage2 then
+            local ped = PlayerPedId()
             HasAlreadyGotMessage2 = true
             exports['progressBars']:startUI(5000, "Returning Rental")
             Wait(5000)
